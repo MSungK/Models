@@ -29,13 +29,13 @@ def main():
                         help='learning rate for Adam')
     parser.add_argument('--snapshot_interval', type=int, default=5,
                         help='Interval of snapshot to generate image')
-    parser.add_argument('--train_content_dir', '-tcd', type=str, default='../dataset/AdaIN/train_qdr',
+    parser.add_argument('--train_content_dir', '-tcd', type=str, default='/workspace/Minsung/dataset/office_31/amazon/images/bike_helmet',
                         help='content images directory for train')
-    parser.add_argument('--train_style_dir', '-tsd', type=str, default='../dataset/AdaIN/train_content',
+    parser.add_argument('--train_style_dir', '-tsd', type=str, default='/workspace/Minsung/dataset/office_31/dslr/images/keyboard',
                         help='style images directory for train')
-    parser.add_argument('--test_content_dir', '-ttcd', type=str, default='../dataset/AdaIN/train_qdr',
+    parser.add_argument('--test_content_dir', '-ttcd', type=str, default='/workspace/Minsung/dataset/office_31/amazon/images/bottle',
                         help='content images directory for test')
-    parser.add_argument('--test_style_dir', '-ttsd', type=str, default='../dataset/AdaIN/test_content',
+    parser.add_argument('--test_style_dir', '-ttsd', type=str, default='/workspace/Minsung/dataset/office_31/dslr/images/monitor',
                         help='style images directory for test')
     parser.add_argument('--save_dir', type=str, default='result',
                         help='save directory for result and loss')

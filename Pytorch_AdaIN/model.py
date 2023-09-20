@@ -130,7 +130,9 @@ class Model(nn.Module):
         style_features = self.vgg_encoder(style_images, output_last_feature=True)
         t = adain(content_features, style_features)
         t = alpha * t + (1 - alpha) * content_features
-        out = self.decoder(t)
+        print(f't.shape: {t.shape}') # b 512 32 32
+        out = self.decoder(t) # b 3 256 256
+        print(f'out.shape: {out.shape}')
 
         output_features = self.vgg_encoder(out, output_last_feature=True)
         output_middle_features = self.vgg_encoder(out, output_last_feature=False)
